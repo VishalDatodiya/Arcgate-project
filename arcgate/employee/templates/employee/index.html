@@ -1,0 +1,13 @@
+{% extends 'employee/base.html' %}
+
+{% block content %}
+
+{% for employee in employees %}
+<h3>{{ employee.name }}</h3>
+<a href="{% url 'update' employee.id %}">Edit</a>
+<a href="{% url 'delete' employee.id %}">Delete</a>
+<hr>
+{% endfor %}
+
+
+{% endblock %}
